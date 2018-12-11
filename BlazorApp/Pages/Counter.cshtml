@@ -1,0 +1,80 @@
+﻿@page "/counter"
+
+<h1>Teste</h1>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Idade</th>
+            <th>Hora</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var usuario in usuarios)
+            {
+            Console.WriteLine("teste");
+            <tr>
+                <td>@usuario.Nome</td>
+                <td>@usuario.Idade</td>
+                <td>@usuario.hora</td>
+            </tr>
+            }
+    </tbody>
+</table>
+
+
+<p>Nome Digitado: @usuario2.Nome</p>
+<p>Idade Digitado:@usuario2.Idade</p>
+@if (usuario2.hora == new DateTime())
+{
+    <p>Hora Cadastro:</p>
+}
+else
+{
+    <p>Hora Cadastro: @usuario2.hora</p>
+}
+<br />
+
+<div>
+    <input id="Nome" type="text" bind="@NomeU" placeholder="Nome" />
+    <input id="Idade" type="text" bind="@IdadeU" placeholder="Idade" />
+    <button class="btn btn-primary" onclick="@MostraNaTela">Enviar</button>
+</div>
+<br />
+<p>Contador: @contador</p>
+<button class="btn btn-primary" onclick="@IncrementaContador">Contador</button>
+
+@functions {
+    int contador = 0;
+    public string NomeU { get; set; }
+    public string IdadeU { get; set; }
+    List<Usuario> usuarios = new List<Usuario>();
+    Usuario usuario2 = new Usuario();
+
+    void IncrementaContador()
+    {
+        contador++;
+    }
+
+    void MostraNaTela()
+    {
+        usuario2.Nome = NomeU;
+        usuario2.Idade = IdadeU;
+        usuario2.hora = DateTime.Now;
+        Usuario usuario = new Usuario();
+        usuario.Nome = NomeU;
+        usuario.Idade = IdadeU;
+        usuario.hora = DateTime.Now;
+        usuarios.Add(usuario);
+
+    }
+
+    class Usuario
+    {
+        public string Nome { get; set; }
+        public string Idade { get; set; }
+        public DateTime hora { get; set; }
+    }
+}

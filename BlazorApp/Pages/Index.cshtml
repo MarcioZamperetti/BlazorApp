@@ -1,0 +1,76 @@
+﻿@page "/"
+
+<h1>Calculadora Juros Compostos</h1>
+<p>Aporte inicial</p>
+<input type="text" bind="@inicial" placeholder="Aporte inicial" />
+<p>Aporte Mensal</p>
+<input type="text" bind="@mensal" placeholder="Aporte mensal" />
+<p>Taxa Juros</p>
+<input type="text" bind="@juros" placeholder="Taxa de Juros" />
+<p>Tempo em Meses</p>
+<input type="text" bind="@tempo" placeholder="Tempo em Meses" />
+<button class="btn btn-primary" onclick="@Calcular">Calcular</button>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Montante</th>
+            <th>Meses</th>
+            <th>Juros</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var Montantae in listaMontante)
+        {
+            
+        <tr>
+            <td>@string.Format("{0:0,0.00}", Montantae.totalmontante)</td>
+            <td>@Montantae.meses</td>
+            <td>@Montantae.juros</td>
+        </tr>
+        }
+    </tbody>
+</table>
+
+
+@functions
+{
+    private double inicial { get; set; }
+    private double mensal { get; set; }
+    private double juros { get; set; }
+    private int tempo { get; set; }
+    double montante = 0;
+    List<montanteClass> listaMontante = new List<montanteClass>();
+    void Calcular()
+    {
+        montanteClass novoMontatne = new montanteClass();
+        montante = 0;
+        juros = juros / 100;
+        montante = inicial + (inicial * juros);
+        novoMontatne.totalmontante = montante;
+        novoMontatne.juros = juros;
+        novoMontatne.meses = 1;
+        listaMontante.Add(novoMontatne);
+
+        for (int i = 2; i <= tempo; i++)
+        {
+            montanteClass novoMontatne2 = new montanteClass();
+            montante = montante + mensal + montante * juros;
+            novoMontatne2.totalmontante = montante;
+            novoMontatne2.juros = juros;
+            novoMontatne2.meses = i;
+            listaMontante.Add(novoMontatne2);
+
+        }
+    }
+
+    class montanteClass
+    {
+        public double totalmontante { get; set; }
+        public int meses { get; set; }
+        public double juros { get; set; }
+
+    }
+
+}
