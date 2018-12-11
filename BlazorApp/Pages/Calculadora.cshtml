@@ -1,28 +1,9 @@
-﻿@page "/counter"
+﻿@page "/Calculadora"
 
 <h1>Teste</h1>
 
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>Nome</th>
-            <th>Idade</th>
-            <th>Hora</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach(var usuario in usuarios)
-            {
-            Console.WriteLine("teste");
-            <tr>
-                <td>@usuario.Nome</td>
-                <td>@usuario.Idade</td>
-                <td>@usuario.hora</td>
-            </tr>
-            }
-    </tbody>
-</table>
+
 
 
 <p>Nome Digitado: @usuario2.Nome</p>
@@ -45,6 +26,28 @@ else
 <br />
 <p>Contador: @contador</p>
 <button class="btn btn-primary" onclick="@IncrementaContador">Contador</button>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Idade</th>
+            <th>Hora</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var usuario in usuarios)
+        {
+            Console.WriteLine("teste");
+            <tr>
+                <td>@usuario.Nome</td>
+                <td>@usuario.Idade</td>
+                <td>@usuario.hora</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
 
 @functions {
     int contador = 0;
