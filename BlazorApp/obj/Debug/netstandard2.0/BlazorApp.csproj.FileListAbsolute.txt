@@ -165,3 +165,16 @@ C:\Users\marcio\source\repos\BlazorApp\BlazorApp\obj\Debug\netstandard2.0\blazor
 C:\Users\marcio\source\repos\BlazorApp\BlazorApp\obj\Debug\netstandard2.0\blazor\_content\BlazorComponents\BlazorComponents.js
 C:\Users\marcio\source\repos\BlazorApp\BlazorApp\obj\Debug\netstandard2.0\Pages\Graficos.g.i.cs
 C:\Users\marcio\source\repos\BlazorApp\BlazorApp\obj\Debug\netstandard2.0\Pages\Graficos.g.cs
+C:\Users\Marcio\Desktop\blazor-teste\BlazorApp\BlazorApp\bin\Debug\netstandard2.0\BlazorComponents.blazor.config
+C:\Users\Marcio\Desktop\blazor-teste\BlazorApp\BlazorApp\bin\Debug\netstandard2.0\dist\_framework\_bin\BlazorComponents.dll
+C:\Users\Marcio\Desktop\blazor-teste\BlazorApp\BlazorApp\bin\Debug\netstandard2.0\dist\_framework\_bin\BlazorComponents.pdb
+C:\Users\Marcio\Desktop\blazor-teste\BlazorApp\BlazorApp\bin\Debug\netstandard2.0\dist\_content\BlazorComponents\BlazorComponents.js
+C:\Users\Marcio\Desktop\blazor-teste\BlazorApp\BlazorApp\bin\Debug\netstandard2.0\BlazorComponents.dll
+C:\Users\Marcio\Desktop\blazor-teste\BlazorApp\BlazorApp\bin\Debug\netstandard2.0\BlazorComponents.pdb
+C:\Users\Marcio\Desktop\blazor-teste\BlazorApp\BlazorApp\obj\Debug\netstandard2.0\Pages\Graficos.g.i.cs
+C:\Users\Marcio\Desktop\blazor-teste\BlazorApp\BlazorApp\obj\Debug\netstandard2.0\Pages\Graficos.g.cs
+C:\Users\Marcio\Desktop\blazor-teste\BlazorApp\BlazorApp\obj\Debug\netstandard2.0\blazor\linker\BlazorComponents.dll
+C:\Users\Marcio\Desktop\blazor-teste\BlazorApp\BlazorApp\obj\Debug\netstandard2.0\blazor\linker\BlazorComponents.pdb
+C:\Users\Marcio\Desktop\blazor-teste\BlazorApp\BlazorApp\obj\Debug\netstandard2.0\blazor\_content\BlazorComponents\BlazorComponents.js
+C:\Users\Marcio\Desktop\blazor-teste\BlazorApp\BlazorApp\obj\Debug\netstandard2.0\Pages\Lembretes.g.i.cs
+C:\Users\Marcio\Desktop\blazor-teste\BlazorApp\BlazorApp\obj\Debug\netstandard2.0\Pages\Lembretes.g.cs

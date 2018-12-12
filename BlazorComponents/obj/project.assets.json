@@ -424,7 +424,7 @@
       ]
     },
     "Microsoft.AspNetCore.Razor.Design/2.1.2": {
-      "sha512": "fe1+dpy+eM4IX1zodsvkihO1Spuj0NecfStWzvkYoMo7/ziOsqSv4vFK36ZpBfHa4gpdCEwaU46EPzdq+ZDYhQ==",
+      "sha512": "ab4+TZw3Sxqrr5TwrwVyABeQkhSxYMJXgG6yZw7T+r6Vz+hcOt+pK79o15ESG7kZvWAK9wRG7emnTIia5O6R1Q==",
       "type": "package",
       "path": "microsoft.aspnetcore.razor.design/2.1.2",
       "hasTools": true,
@@ -451,7 +451,7 @@
       ]
     },
     "Microsoft.Extensions.DependencyInjection/2.1.0": {
-      "sha512": "gqQviLfuA31PheEGi+XJoZc1bc9H9RsPa9Gq9XuDct7XGWSR9eVXjK5Sg7CSUPhTFHSuxUFY12wcTYLZ4zM1hg==",
+      "sha512": "HG/PMzoRWkHk+XHknD7J2q/UmeXF8eqqwDEfgvNL6nkOITcYgp3r+pCCPHD0dxVXtZjaFru7PoYxmvq2NcJy6Q==",
       "type": "package",
       "path": "microsoft.extensions.dependencyinjection/2.1.0",
       "files": [
@@ -468,7 +468,7 @@
       ]
     },
     "Microsoft.Extensions.DependencyInjection.Abstractions/2.1.0": {
-      "sha512": "8/CtASu80UIoyG+r8FstrmZW5GLtXxzoYpjj3jV0FKZCL5CiFgSH3pAmqut/dC68mu7N1bU6v0UtKKL3gCUQGQ==",
+      "sha512": "6Krshi1mFyDQ+NZSgyxv4GN9I45TXjmXTHJZ3c7x24m/IV2iy7euEivIdYpQXdBGzzslZcHBS9ElN2Cs7n6wpQ==",
       "type": "package",
       "path": "microsoft.extensions.dependencyinjection.abstractions/2.1.0",
       "files": [
@@ -493,7 +493,7 @@
       ]
     },
     "Microsoft.NETCore.Platforms/1.1.0": {
-      "sha512": "kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A==",
+      "sha512": "bLpT1f/SFlO1CzqXG12KnJzpZs6lv24uX2Rzi4Fmm0noJpNlnWRVryuO3yK18Ca04t/YHcO1e1Z0WDfjseqNzw==",
       "type": "package",
       "path": "microsoft.netcore.platforms/1.1.0",
       "files": [
@@ -657,23 +657,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\marcio\\.nuget\\packages\\": {},
+    "C:\\Users\\Marcio\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "0.5.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\marcio\\source\\repos\\BlazorApp\\BlazorComponents\\BlazorComponents.csproj",
+      "projectUniqueName": "C:\\Users\\Marcio\\Desktop\\blazor-teste\\BlazorApp\\BlazorComponents\\BlazorComponents.csproj",
       "projectName": "BlazorComponents",
-      "projectPath": "C:\\Users\\marcio\\source\\repos\\BlazorApp\\BlazorComponents\\BlazorComponents.csproj",
-      "packagesPath": "C:\\Users\\marcio\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\marcio\\source\\repos\\BlazorApp\\BlazorComponents\\obj\\",
+      "projectPath": "C:\\Users\\Marcio\\Desktop\\blazor-teste\\BlazorApp\\BlazorComponents\\BlazorComponents.csproj",
+      "packagesPath": "C:\\Users\\Marcio\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Marcio\\Desktop\\blazor-teste\\BlazorApp\\BlazorComponents\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\marcio\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Marcio\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

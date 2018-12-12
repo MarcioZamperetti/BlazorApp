@@ -1,0 +1,114 @@
+﻿@page "/Lembretes"
+
+
+<h1>Lembretes</h1>
+<label for="start">Nome do lembrete:</label>
+<input id="idnomelembrete" type="text" bind="@Nome" />
+
+<label for="start">Selecione a data:</label>
+
+@*<input type="date" id="start" name="trip-start"
+    value="2018-07-22"
+    min="2018-01-01" max="2022-12-31">*@
+
+<input type="text" bind="@data" format-value="dd.MM.yyyy" />
+<span class="note">Formato: dd/mm/aaaa HH:MM:SS </span>
+@*<label for="appt">Selecione a hora:</label>
+        12/12/2018 21:49:38
+
+    <input type="time" id="appt" name="appt"
+           min="0:00" max="24:00" required>*@
+
+<button class="btn btn-primary" onclick="@Salvar">Salvar</button>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Data</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var lembrete in listaLembrete)
+        {
+
+            <tr>
+                <td>@lembrete.nome</td>
+                <td>@lembrete.datas</td>
+            </tr>
+        }
+    </tbody>
+</table>
+<h1>@notification</h1>
+
+@functions
+{
+        public string Nome { get; set; }
+        public DateTime data { get; set; }
+        public DateTime dating = DateTime.Now;
+        List<lembrete> listaLembrete = new List<lembrete>();
+        public string notification { get; set; }
+
+
+        void Salvar()
+        {
+            lembrete novoLembrete = new lembrete();
+            novoLembrete.nome = Nome;
+            novoLembrete.datas = data;
+            listaLembrete.Add(novoLembrete);
+            List<MyEvent> _myEvents;
+            _myEvents = new List<MyEvent>()
+{
+    new MyEvent("My event A", DateTime.Now.AddSeconds(5)),
+    new MyEvent("My event B", DateTime.Now.AddSeconds(10)),
+    new MyEvent("My event C", DateTime.Now.AddSeconds(20))
+};
+
+            Task.Factory.StartNew(() =>
+            {
+                while (true)
+                {
+                    // Report events' status
+                    DateTime now = DateTime.Now;
+
+                    foreach (var myEvent in _myEvents.Where(e => e.Time <= now))
+                        System.Diagnostics.Debug.WriteLine(string.Format("Event '{0}' already held", myEvent.Name));
+
+                    foreach (var myEvent in _myEvents.Where(e => e.Time > now))
+                    {
+                        string notification = "Event '{0}' at '{1}' starting in {2} seconds";
+                        TimeSpan timeSpan = myEvent.Time - now;
+                        notification = string.Format(notification, myEvent.Name, myEvent.Time, (int)timeSpan.TotalSeconds);
+                        
+                    }
+                   
+                
+                // Wait for a while before next iteration
+                Thread.Sleep(8000);
+                }
+            });
+    }
+
+    class lembrete
+    {
+        public string nome { get; set; }
+        public DateTime datas { get; set; }
+
+    }
+
+    class MyEvent
+    {
+        public MyEvent()
+        { }
+
+        public MyEvent(string name, DateTime time)
+        {
+            Name = name;
+            Time = time;
+        }
+
+        public string Name { get; set; }
+
+        public DateTime Time { get; set; }
+    }
+}
