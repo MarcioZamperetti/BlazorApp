@@ -1,0 +1,31 @@
+﻿@using BlazorComponents.ChartJS
+@using Microsoft.AspNetCore.Blazor.Components
+
+@inherits ChartBase
+
+<div class="row">
+    <div class="container">
+        <canvas id="@Chart.CanvasId" width="@Width" height="@Height"></canvas>
+    </div>
+</div>
+@functions {
+
+    [Parameter]
+    ChartJSRadarChart Chart { get; set; }
+
+    protected override void OnAfterRender()
+    {
+        ChartJSInterop.InitializeRadarChart(Chart);
+    }
+
+    public void UpdateChart(ChartJSRadarChart updatedChart)
+    {
+        ChartJSInterop.UpdateRadarChart(updatedChart);
+    }
+
+    protected override IChart GetChart()
+    {
+        return Chart;
+    }
+
+}

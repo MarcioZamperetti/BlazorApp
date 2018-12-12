@@ -122,6 +122,20 @@
         "build": {
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
+      },
+      "BlazorComponents/0.5.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.Blazor.Browser": "0.7.0",
+          "Microsoft.AspNetCore.Blazor.Build": "0.7.0"
+        },
+        "compile": {
+          "bin/placeholder/BlazorComponents.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BlazorComponents.dll": {}
+        }
       }
     }
   },
@@ -424,7 +438,7 @@
       ]
     },
     "Microsoft.AspNetCore.Razor.Design/2.1.2": {
-      "sha512": "ab4+TZw3Sxqrr5TwrwVyABeQkhSxYMJXgG6yZw7T+r6Vz+hcOt+pK79o15ESG7kZvWAK9wRG7emnTIia5O6R1Q==",
+      "sha512": "fe1+dpy+eM4IX1zodsvkihO1Spuj0NecfStWzvkYoMo7/ziOsqSv4vFK36ZpBfHa4gpdCEwaU46EPzdq+ZDYhQ==",
       "type": "package",
       "path": "microsoft.aspnetcore.razor.design/2.1.2",
       "hasTools": true,
@@ -451,7 +465,7 @@
       ]
     },
     "Microsoft.Extensions.DependencyInjection/2.1.0": {
-      "sha512": "HG/PMzoRWkHk+XHknD7J2q/UmeXF8eqqwDEfgvNL6nkOITcYgp3r+pCCPHD0dxVXtZjaFru7PoYxmvq2NcJy6Q==",
+      "sha512": "gqQviLfuA31PheEGi+XJoZc1bc9H9RsPa9Gq9XuDct7XGWSR9eVXjK5Sg7CSUPhTFHSuxUFY12wcTYLZ4zM1hg==",
       "type": "package",
       "path": "microsoft.extensions.dependencyinjection/2.1.0",
       "files": [
@@ -468,7 +482,7 @@
       ]
     },
     "Microsoft.Extensions.DependencyInjection.Abstractions/2.1.0": {
-      "sha512": "6Krshi1mFyDQ+NZSgyxv4GN9I45TXjmXTHJZ3c7x24m/IV2iy7euEivIdYpQXdBGzzslZcHBS9ElN2Cs7n6wpQ==",
+      "sha512": "8/CtASu80UIoyG+r8FstrmZW5GLtXxzoYpjj3jV0FKZCL5CiFgSH3pAmqut/dC68mu7N1bU6v0UtKKL3gCUQGQ==",
       "type": "package",
       "path": "microsoft.extensions.dependencyinjection.abstractions/2.1.0",
       "files": [
@@ -493,7 +507,7 @@
       ]
     },
     "Microsoft.NETCore.Platforms/1.1.0": {
-      "sha512": "bLpT1f/SFlO1CzqXG12KnJzpZs6lv24uX2Rzi4Fmm0noJpNlnWRVryuO3yK18Ca04t/YHcO1e1Z0WDfjseqNzw==",
+      "sha512": "kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A==",
       "type": "package",
       "path": "microsoft.netcore.platforms/1.1.0",
       "files": [
@@ -647,33 +661,39 @@
         "netstandard.library.2.0.3.nupkg.sha512",
         "netstandard.library.nuspec"
       ]
+    },
+    "BlazorComponents/0.5.0": {
+      "type": "project",
+      "path": "../BlazorComponents/BlazorComponents.csproj",
+      "msbuildProject": "../BlazorComponents/BlazorComponents.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
+      "BlazorComponents >= 0.5.0",
       "Microsoft.AspNetCore.Blazor.Browser >= 0.7.0",
       "Microsoft.AspNetCore.Blazor.Build >= 0.7.0",
       "NETStandard.Library >= 2.0.3"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Marcio\\.nuget\\packages\\": {},
+    "C:\\Users\\marcio\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Marcio\\Desktop\\blazor-teste\\BlazorApp\\BlazorApp\\BlazorApp.csproj",
+      "projectUniqueName": "C:\\Users\\marcio\\source\\repos\\BlazorApp\\BlazorApp\\BlazorApp.csproj",
       "projectName": "BlazorApp",
-      "projectPath": "C:\\Users\\Marcio\\Desktop\\blazor-teste\\BlazorApp\\BlazorApp\\BlazorApp.csproj",
-      "packagesPath": "C:\\Users\\Marcio\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Marcio\\Desktop\\blazor-teste\\BlazorApp\\BlazorApp\\obj\\",
+      "projectPath": "C:\\Users\\marcio\\source\\repos\\BlazorApp\\BlazorApp\\BlazorApp.csproj",
+      "packagesPath": "C:\\Users\\marcio\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\marcio\\source\\repos\\BlazorApp\\BlazorApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Marcio\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\marcio\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -685,7 +705,11 @@
       },
       "frameworks": {
         "netstandard2.0": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\marcio\\source\\repos\\BlazorApp\\BlazorComponents\\BlazorComponents.csproj": {
+              "projectPath": "C:\\Users\\marcio\\source\\repos\\BlazorApp\\BlazorComponents\\BlazorComponents.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

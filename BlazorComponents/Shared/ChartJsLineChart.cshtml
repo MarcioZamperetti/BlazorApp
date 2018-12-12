@@ -1,0 +1,36 @@
+﻿@using BlazorComponents.ChartJS
+@using Microsoft.AspNetCore.Blazor.Components
+
+@inherits ChartBase
+
+<div class="row">
+    <div class="container">
+        <canvas id="@Chart.CanvasId" width="@Width" height="@Height"></canvas>
+    </div>
+</div>
+@functions {
+
+    [Parameter]
+    ChartJSLineChart Chart { get; set; }
+
+    protected override void OnAfterRender()
+    {
+        ChartJSInterop.InitializeLineChart(Chart);
+    }
+
+    void DisplayChart()
+    {
+        ChartJSInterop.InitializeLineChart(Chart);
+    }
+
+    public void UpdateChart(ChartJSLineChart updatedChart)
+    {
+        ChartJSInterop.UpdateLineChart(updatedChart);
+    }
+
+    protected override IChart GetChart()
+    {
+        return Chart;
+    }
+
+}

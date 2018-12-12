@@ -1,3 +1,4 @@
+BlazorComponents.dll
 Microsoft.AspNetCore.Blazor.Browser.dll
 Microsoft.AspNetCore.Blazor.dll
 Microsoft.AspNetCore.Blazor.TagHelperWorkaround.dll
@@ -10,3 +11,4 @@ System.Core.dll
 System.dll
 System.Net.Http.dll
 BlazorApp.pdb
+BlazorComponents.pdb
